@@ -1,4 +1,6 @@
-FROM python:3.7.0-alpine3.8
+ARG PYTHON_VERSION
+
+FROM python:$PYTHON_VERSION
 
 WORKDIR /usr/src/app
 

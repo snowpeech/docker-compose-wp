@@ -2,7 +2,11 @@ version: '3'
 
 services:
   app:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - PYTHON_VERSION=3.7.0-alpine3.8
     image: takacsmark/flask-redis:1.0
     environment:
       - FLASK_ENV=development
